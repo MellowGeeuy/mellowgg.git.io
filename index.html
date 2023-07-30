@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Example</title>
+</head>
+<body>
+    <!-- menu -->
+
+  <div class="navigation">
+    <div class="logo">
+      <h1>LOGO</h1>
+    </div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">|</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- 1 -->
+    <div class="parallax-container">
+        <div class="parallax-bg">
+            <img src="img/24866.jpg" alt="">
+        </div>
+        
+        <div class="content">
+            <h1>This Test</h1>
+            <h1>parallax Style</h1>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="content" style="height: 100lvh;">
+        <h2>Section 2</h2>
+        <p>Content goes here...</p>
+    </div>
+
+
+
+    <!-- 3 -->
+    <div class="parallax-container">
+        <div class="parallax-bg">
+            <img src="img/99840.jpg" alt="">
+        </div>
+        <div class="content">
+            <h2>Content Section 3</h2>
+        </div>
+    </div>
+
+    <!-- Add more content sections and parallax containers as needed -->
+
+    <script>
+        // Parallax scrolling effect
+        const parallaxContainers = document.querySelectorAll(".parallax-container");
+        window.addEventListener("scroll", () => {
+            parallaxContainers.forEach(container => {
+                const speed = container.dataset.speed || 10;
+                const yOffset = -window.scrollY / speed;
+                container.querySelector(".parallax-bg").style.transform = `translateY(${yOffset}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

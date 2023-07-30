@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navigation {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    width:90%;
+    left: 100px;
+    top: 40px;
+    z-index: 2;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    
+  }
+
+  .menu li {
+    margin-right: 80px;
+  }
+
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.2s ease-in;
+    
+  }
+
+  .menu li a:hover {
+   color: rgb(0, 0, 0);
+   padding: 14px 20px;
+   background-color: #ffcb02;
+   border-radius: 14px;
+   cursor: pointer;
+
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+ 
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .logo img {
+    width: 100px; /* Set the desired width of your logo */
+    height: auto;
+  }
+
+  
+.parallax-container {
+    position: relative;
+    height: 100lvh; /* Adjust to your desired parallax effect */
+    overflow: hidden;
+}
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Adjust the opacity if needed */
+    z-index: -1;
+}
+.parallax-bg img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.content {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    top: 40%;
+}
